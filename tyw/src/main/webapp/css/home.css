@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{ background:url(../images/bg/b.jpg) no-repeat}*/
+.homebg{ width:1000px; margin:0 auto;}
+.home_logo_jianju{ margin-left:60px;}
+.youju{ right:70px;}
+.feature {
+	MARGIN-TOP: 2em;
+	margin-left:70px;
+	margin-top:50px;
+	POSITION: relative
+}
+#my-glider {
+	POSITION: relative
+}
+.scroller {
+	OVERFLOW: hidden; WIDTH:860px; HEIGHT: 180px; position:relative
+}
+.scroller .content {
+	WIDTH: 10000px
+}
+.section{ width:880px; height:180px; overflow:hidden; float:left; white-space:nowrap}
+
+ 
+
+.nav_pic{ width:1000px; height:px; margin:0 auto; position:relative;}
+.zuojt{ position:absolute; top:80px; left:10px;}
+.youjt{ position:absolute; top:80px; right:10px}
+.nav_pic ul{display:}
+.nav_pic li{ list-style:none; float:left; margin-right:14px; margin-top:23px; background: url(../images/home/pic_bg_03.png); width:161px; height:36px; position:relative;
+
+-webkit-border-radius: 0px;							 /* For Firefox3.6+ */
+-moz-border-radius: 0px;							/* For Chrome5+, Safari5+ */
+border-radius: 0px;									/* For Latest Opera */
+
+-moz-box-shadow:0px 0px 0px #b9b9b9;               /* For Firefox3.6+ */
+-webkit-box-shadow:0px 0px 0px #b9b9b9;          /* For Chrome5+, Safari5+ */
+box-shadow:0px 0px 0px #b9b9b9;                    /* For Latest Opera */
+}
+.nav_pic li:hover{ background:url(../images/home/pic_bg_04.png)}
+
+.nav_pic li img{ width:62px; height:35px; position:absolute; top:-8px; left:5px; border:0px solid #66CCCC}
+
+.nav_pic_word a{ color:#00809f; font-weight:bold}
+.nav_pic_wordleft{ float:left; font-family:"microsoft yahei"; margin-top:5px; margin-left:74px; width:px; height:20px; line-height:20px; color:#FFFFFF; display:inline; font-size:13px;
+-webkit-border-radius: 3px;							 /* For Firefox3.6+ */
+-moz-border-radius: 3px;							/* For Chrome5+, Safari5+ */
+border-radius: 2px;									/* For Latest Opera */
+}
+.nav_pic_wordright{ width:20px; height:20px; float:right; margin-top:5px; margin-right:5px; display:none }
+.nav_pic_wordright a{display:block; width:19px; padding-left:1px; height:20px; line-height:22px; color:#fff; background:url(../images/home/more2_03.gif); text-align:center; font-size:12px}
+.nav_pic_wordright a:hover{background:url(../images/home/more_03.gif); text-decoration:none}
+
+
+
+.home_new{ border-top:2px solid #00809f; width:994px; margin:0 3px; background:url(../images/home/homecon_30.gif); min-height:500px;}
+
+
+.colorblock{ width:35px; height:16px; background:#006083; margin-top:7px;}
+.colorblock2{ width:35px; height:16px; background:#00837c; margin-top:7px;}
+.colorblock3{ width:35px; height:16px; background:#008332; margin-top:7px;}
+
+
+
+.loading{ text-align:center; clear:both; line-height:90px; font-family:"microsoft yahei"; font-size:16px; color:#666666}
+
+.home_logo{ width:1000px; margin:0 auto; text-align:center; margin-top:120px; clear:both;}
+.home_logo img{ margin-right:30px;}
+.home_search{ width:820px; height:70px; padding-left:180px; margin:0 auto; margin-top:30px; clear:both; position:relative}
+
+
+
+/*home*/
+
+.block_box{ width:980px; margin:0 auto; margin-top:10px; color:#ffffff}
+.block_box a{ color:#ffffff;}
+.block_nav{ width:660px; position:relative; font-family:"microsoft yahei"; float:left}
+.block_box li.block{ width:150px; height:150px; background:#017196; color:#ffffff; position:relative; margin-right:15px; _margin-right:11px; margin-bottom:15px; float:left}
+
+.block_box li.big{ width:315px; height:150px; margin-right:15px; margin-bottom:15px; _margin-right:11px; float:left}
+.block_box li.bigblock{ width:150px; height:150px; background:#2877e3; margin-right:15px; margin-bottom:15px; position:relative; position:absolute; top:330px; left:660px; float:left}
+.block_box li.bigblock2{ width:150px; height:150px; background:#2877e3; margin-right:15px; margin-bottom:15px; position:relative; position:absolute; top:330px; left:825px; float:left}
+
+
+.block_box li h3{ font-size:18px; font-family:"microsoft yahei"; margin-top:10px; font-weight:normal}
+.block_box li h3 .left{ margin-left:15px;}
+.block_box li h3 .right{ margin-right:10px; margin-top:3px;}
+.block_box li .list2{
+	position:absolute;
+	bottom:15px;
+	left:20px;
+}
+.block_box li.b_1{ background: url(../images/home/bbg_03.gif)}
+.block_box li.b_2{ background: url(../images/home/bbg_05.gif)}
+.block_box li.b_3{ background: url(../images/home/bbg_07.gif)}
+.block_box li.b_4{ background: url(../images/home/bbg_13.gif)}
+.block_box li.b_5{ background: url(../images/home/bbg_15.gif)}
+.block_box li.b_6{ background: url(../images/home/bbg_19.gif)}
+.block_box li.b_7{ background: url(../images/home/bbg_20.gif)}
+.block_box li.b_8{ background: url(../images/home/bbg_21.gif)}
+.block_box li.b_9{ background: url(../images/home/bbg_22.gif)}
+.block_box li.b_10{ background: url(../images/home/bbg_24.gif) -75px 0;}
+.block_box li.b_11{ background:url(../images/home/fbfx_24.gif)}
+
+
+.block_box li .list2 li{ line-height:20px; display:none}
+.block_box li .num{ position:absolute; bottom:15px; right:10px; font-family:Arial, Helvetica, sans-serif, Georgia; font-size:14px; filter:alpha(opacity=50); /*IE滤镜，透明度50%*/ -moz-opacity:0.5; /*Firefox私有，透明度50%*/ opacity:0.5;/*其他，透明度50%*/}
+
+.news{
+	float:left;
+	background:#30b02e;
+	width:315px;
+	height:315px;
+}
+.news h3{ font-size:18px; line-height:35px; font-family:"microsoft yahei"; font-weight:normal; padding-left:10px;}
+.news h3 a{ margin-left:5px; display:inline-block; color:#ffffff; filter:alpha(opacity=50); /*IE滤镜，透明度50%*/ -moz-opacity:0.5; /*Firefox私有，透明度50%*/ opacity:0.5;/*其他，透明度50%*/}
+.news h3 a.hover{ color:#FFFFFF;filter:alpha(opacity=100); /*IE滤镜，透明度50%*/ -moz-opacity:1; /*Firefox私有，透明度50%*/ opacity:1;/*其他，透明度50%*/}
+.news li{}
+.news li a{ color: #ffffff; line-height:15px; height:14px; margin:16px 15px; font-size:14px; border-left:3px solid #ffffff; padding-left:10px; width:260px;  overflow:hidden; display:block; filter:alpha(opacity=70); /*IE滤镜，透明度50%*/ -moz-opacity:0.7; /*Firefox私有，透明度50%*/ opacity:0.7;/*其他，透明度50%*/}
+.news li a:hover{ color: #ffffff; border-left:3px solid #ffffff;filter:alpha(opacity=100); /*IE滤镜，透明度50%*/ -moz-opacity:1; /*Firefox私有，透明度50%*/ opacity:1;/*其他，透明度50%*/}
+
+.bottom{ width:100%; background:#333333; margin-top:10px;}
+.home_foot{ width:1000px; margin:0 auto; color:#666666;  line-height:30px; height:30px; background:#333333; color:#999999}
+.home_foot a{ color:#999999}

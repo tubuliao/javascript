@@ -1,0 +1,10 @@
+function geoip_country_code() { return 'CN'; }
+function geoip_country_name() { return 'China'; }
+function geoip_city()         { return 'Beijing'; }
+function geoip_region()       { return '22'; }
+function geoip_region_name()  { return 'Beijing'; }
+function geoip_latitude()     { return '39.9289'; }
+function geoip_longitude()    { return '116.3883'; }
+function geoip_postal_code()  { return ''; }
+function geoip_area_code()    { return ''; }
+function geoip_metro_code()   { return ''; }

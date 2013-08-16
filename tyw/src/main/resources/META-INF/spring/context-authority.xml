@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:oauth="http://www.springframework.org/schema/security/oauth2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+    	http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2-1.0.xsd"
+    default-lazy-init="true" >
+	
+	<!-- OAUTH 2.0 token 过滤器链 -->
+	<sec:http pattern="/oauth/token" create-session="stateless" entry-point-ref="oauthAuthenticationEntryPoint" 
+		authentication-manager-ref="clientAuthenticationManager" >
+		<sec:anonymous enabled="false" />
+		<sec:intercept-url pattern="/oauth/token" access="IS_AUTHENTICATED_FULLY" />
+		<!-- -->
+		<sec:http-basic entry-point-ref="oauthAuthenticationEntryPoint" />
+		
+		<sec:custom-filter ref="clientCredentialsTokenEndpointFilter" before="BASIC_AUTH_FILTER" />
+		
+		<sec:access-denied-handler ref="oauthAccessDeniedHandler" />
+	</sec:http>
+	
+	<!-- OAUTH 2.0 资源 过滤器链 -->
+	<sec:http pattern="/api/**" create-session="never" entry-point-ref="oauthAuthenticationEntryPoint"
+		access-decision-manager-ref="accessDecisionManager" >
+		<sec:anonymous enabled="false" />
+		<sec:intercept-url pattern="/api/**" access="ROLE_USER,SCOPE_READ" />
+		<sec:custom-filter ref="resourceServerFilter" before="PRE_AUTH_FILTER" />
+		<sec:access-denied-handler ref="oauthAccessDeniedHandler" />
+	</sec:http>
+	
+	
+	<!--  -->
+	<sec:http access-denied-page="/login.jsp?authorization_error=true"  disable-url-rewriting="true" >
+	
+		<sec:intercept-url pattern="/oauth/**" access="ROLE_USER" />
+		<sec:intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<!-- 渠道商用户权限过滤 -->
+		<sec:intercept-url pattern="/channel/web/**" access="ROLE_CHANNEL" />
+		<!-- 企业用户权限过滤 -->
+		<sec:intercept-url pattern="/enterprise/web/**" access="ROLE_ENTERPRISE" />
+		<!-- 个人用户权限过滤 -->
+		<sec:intercept-url pattern="/person/web/**" access="ROLE_PERSON" />
+		<!-- 后台管理权限过滤 -->
+		<sec:intercept-url pattern="/toBackGround" access="ROLE_BACKGROUND" />
+		
+		<!-- error-if-maximum-exceeded = true 组织第二个用户登录 如果是false就是让第一个用户失效 -->
+		<sec:session-management>  
+            <sec:concurrency-control max-sessions="1" expired-url="/onlineerror.jsp" error-if-maximum-exceeded="false" />  
+        </sec:session-management>  
+        
+		<sec:form-login authentication-failure-url="/login.jsp?authentication_error=true" 
+						default-target-url="/tywadmin"
+						login-page="/login.jsp" 
+						login-processing-url="/login.do"
+						always-use-default-target="true"
+						authentication-success-handler-ref="successHandler"
+						/>
+		<sec:logout logout-success-url="/index.jsp" logout-url="/logout.do" />
+		<sec:anonymous />
+	</sec:http>
+	
+	<bean id="successHandler"
+		class="com.isoftstone.tyw.service.LoginAuthenticationSuccessHandler">
+		<property name="url" value="/login.do" />
+	</bean>
+	
+	
+	
+	
+	
+	<!-- 用户管理 AuthenticationManager -->
+	<sec:authentication-manager alias="authenticationManager">
+		<sec:authentication-provider user-service-ref="authorityService">
+			<!-- 使用md5算法对密码进行加密，盐值字段使用username -->
+			<sec:password-encoder hash="md5">
+				<sec:salt-source user-property="username"/>
+			</sec:password-encoder>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+	
+	<!-- 用户端管理 AuthenticationManager -->
+	<sec:authentication-manager id="clientAuthenticationManager" >
+		<sec:authentication-provider user-service-ref="clientDetailsUserService" />
+	</sec:authentication-manager>
+	
+	<bean id="authorityService" class="com.isoftstone.tyw.service.AuthorityService" />
+	
+	<bean id="clientDetailsUserService" class="org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService">
+		<constructor-arg ref="clientDetails" />
+	</bean>
+	
+	<bean id="oauthAuthenticationEntryPoint" class="org.springframework.security.oauth2.provider.error.OAuth2AuthenticationEntryPoint">
+		<property name="realmName" value="sparklr" />
+	</bean>
+	
+	<bean id="oauthAccessDeniedHandler" class="org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler" />
+	
+	<bean id="clientCredentialsTokenEndpointFilter" class="org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter">
+		<property name="authenticationManager" ref="clientAuthenticationManager" />
+	</bean>
+	
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased" xmlns="http://www.springframework.org/schema/beans">
+		<constructor-arg>
+			<list>
+				<bean class="org.springframework.security.oauth2.provider.vote.ScopeVoter" />
+				<bean class="org.springframework.security.access.vote.RoleVoter" />
+				<bean class="org.springframework.security.access.vote.AuthenticatedVoter" />
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="tokenStore" class="org.springframework.security.oauth2.provider.token.InMemoryTokenStore" />
+
+	<bean id="tokenServices" class="org.springframework.security.oauth2.provider.token.DefaultTokenServices">
+		<property name="tokenStore" ref="tokenStore" />
+		<property name="supportRefreshToken" value="true" />
+		<property name="clientDetailsService" ref="clientDetails"/>
+	</bean>
+	
+	<bean id="userApprovalHandler" class="com.isoftstone.tyw.service.UserApprovalHandler">
+		<property name="autoApproveClients">
+			<set>
+				<value>my-less-trusted-autoapprove-client</value>
+			</set>
+		</property>
+		<property name="tokenServices" ref="tokenServices" />
+	</bean>
+	
+	<!-- oauth 2 provider -->
+	<oauth:authorization-server 
+		client-details-service-ref="clientDetails" 
+		token-services-ref="tokenServices"
+		user-approval-handler-ref="userApprovalHandler">
+		<oauth:authorization-code />
+		<oauth:implicit />
+		<oauth:refresh-token />
+		<oauth:client-credentials />
+		<oauth:password />
+	</oauth:authorization-server>
+
+	<oauth:resource-server id="resourceServerFilter" resource-id="sparklr" token-services-ref="tokenServices" />
+	
+	<oauth:client-details-service id="clientDetails">
+		<oauth:client client-id="tonr" resource-ids="sparklr" authorized-grant-types="authorization_code,implicit"
+			secret="secret" authorities="ROLE_USER" scope="read,write" />
+		<oauth:client client-id="client" authorized-grant-types="password,authorization_code,refresh_token,implicit"
+			secret="somesecret" authorities="ROLE_USER" scope="read,write"/>
+		<oauth:client client-id="mobile" authorized-grant-types="password,authorization_code,refresh_token,implicit"
+			secret="somesecret" authorities="ROLE_USER" scope="read,write"/>
+	</oauth:client-details-service>
+	
+	<sec:global-method-security pre-post-annotations="enabled" proxy-target-class="true">
+		<sec:expression-handler ref="oauthExpressionHandler" />
+	</sec:global-method-security>
+
+	<oauth:expression-handler id="oauthExpressionHandler" />
+
+</beans>

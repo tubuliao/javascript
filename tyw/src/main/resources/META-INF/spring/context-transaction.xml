@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       	xmlns:tx="http://www.springframework.org/schema/tx"
+       	xmlns:p="http://www.springframework.org/schema/p"
+       	xsi:schemaLocation="
+       		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+       	default-lazy-init="true" >
+	
+	<description>事务配置</description>
+	
+	<!-- 声明式事务配置 : 注释配置声明事务管理，若proxyTargetClass默认为false,使用JDK动态代理. 属性为true,则使用CGLIB代理. -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="false"/>
+	
+	<!-- 生产环境事务配置 -->
+	<beans profile="production">
+		<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager" > 
+			<property name="transactionManager">
+	        	<bean class="org.springframework.jndi.JndiObjectFactoryBean">
+	            	<property name="resourceRef" value="true" />
+	             	<property name="jndiName" value="jndi\TransactionManager" />
+	             	<property name="expectedType" value="javax.transaction.TransactionManager" />
+	        	</bean>
+	    	</property>
+		</bean>
+	</beans>
+	
+	<!-- 开发环境数据源配置 -->
+	<beans profile="development"> 
+		<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" 
+			  p:entityManagerFactory-ref="entityManagerFactory"
+			  p:dataSource-ref="dataSource" />
+	</beans>    
+</beans>

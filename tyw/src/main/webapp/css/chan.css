@@ -1,0 +1,78 @@
+* { padding: 0; margin: 0; outline: 0; }
+
+body, html { height: 100%; }
+
+body {
+	background: #eeeeee;
+	font-size: 12px;
+	line-height: 18px;
+	color: #888;
+}
+input, textarea, select { font-size:12px; }
+.field { padding: 4px 5px; border: solid 1px #e7e7e7; color: #969696; height: 15px; }
+.field-focused { color: #333; }
+input.button { padding: 4px 5px; cursor: pointer; }
+
+a { color: #999; cursor: pointer; }
+a img { border: 0; }
+
+h2 { font-size: 14px; line-height:30px; font-weight: bold; color: #464646; margin-bottom: 5px;  padding-left:5px; }
+
+p { padding-bottom: 18px; }
+
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+
+.cl { font-size: 0; line-height: 0; clear: both; display: block; height: 0; }
+
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
+
+.al { text-align: left; }
+.ar { text-align: right; }
+.ac { text-align: center; }
+
+#page { width:990px; margin: 0 auto; }
+#page { padding:0px; height: auto !important; height: 100%; }
+
+#top { width: 990px;margin: 0 auto; background:url(../images/channel/dalou_05.gif) right no-repeat }
+
+#logo { float: left; display: inline; width: 270px; font-size: 0; line-height: 0; margin-top:5px; }
+#logo a { display: block; height: 47px; text-indent: -4000px; background: url(../images/channel/channel_03.gif) no-repeat }
+
+#search { float: right; display: inline; padding-top: 18px; width: 250px; }
+#search .field-holder { float: right; display: inline; width: 196px; background: url(../images/channel/images/search-field.gif) no-repeat 0 0; padding: 1px; }
+#search .field { width: 186px; border: 0; background: none; }
+#search .button { float: right; display: inline; width: 25px; height: 25px; font-size: 0; line-height: 0; text-indent: -4000px; margin-left:5px; }
+#search .button { background: url(../images/channel/images/search-button.gif) no-repeat 0 0; border: 0; }
+
+#navigation { height: 36px; margin-top: 7px; font-family:"microsoft yahei"; background:#4bbd00; border-left:1px solid #368a00 }
+#navigation ul { font-size: 14px; line-height: 36px; text-transform: capitalize;}
+#navigation ul li { float:left; width:108px; height:36px; list-style-type: none; text-align:center;}
+#navigation ul li a { width:108px; height:36px; color: #fff; text-decoration: none; background:url(../images/channel/li_09.gif) right no-repeat; display: block; }
+#navigation ul li a:hover,
+#navigation ul li a.active{display: inline-block; color: #fff; width:108px; height:36px; background:#368a00; border-right:1px solid #5be600}
+
+
+
+#main { border-bottom: solid 0px #e3e7e9; margin-bottom: 6px; position:relative; }
+
+h2.txt-we-love-mondays { height: 94px; background-image: url(../images/channel/images/txt-we-love-mondays.gif); }
+h3.txt-monday-again { background-image: url(../images/channel/images/txt-monday-again.gif); }
+h3.txt-wedothis { background-image: url(../images/channel/images/txt-wedothis.gif); }
+h3.txt-247 { background-image: url(../images/channel/images/txt-247.gif); }
+
+.button-more { display: block; width: 66px; height: 22px; font-size: 0; line-height: 0; text-indent: -4000px; background: url(../images/channel/images/button-more.gif) no-repeat 0 0; }
+.more { margin-left:20px; }
+
+.cols { padding: 15px 0 10px; }
+.cols .col { float: left; display: inline; }
+.cols .col-last { margin-right: 0 !important; }
+.cols .col h3.notext { height: 45px; margin-bottom: 5px; }
+
+.col { width: 990px; color:#333333; background:#FFf; border-top:1px solid #e5e5e5 }
+.two-cols .col { width: 990px; margin-right: 0px; }
+
+#footer {background: #e4e0e1; line-height:35px;color:#797979; border-top:1px solid #d7d5d6; text-align:center; margin-top:20px;}
+#footer a { color: #797979; text-decoration: none; }
+#footer a:hover { color: #237087; }
+#footer span { margin: 0 6px;}

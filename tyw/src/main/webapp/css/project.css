@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background:url(../images/bg/bg-0048.gif)}
+.content{ width:1000px; margin:0 auto}
+.project_login{ width:500px; height:140px; margin:200px auto; background:url(../images/project/leaf_03.png) right bottom no-repeat;}
+.logo_box{ font-family:"microsoft yahei"; min-width:500px;}
+.logo_box img{ margin-right:5px;}
+.logo_box h3{ margin:0; line-height:22px; color:#666; margin-top:3px;}
+.logo_box p{ line-height:px; color:#ababab}
+
+.project_login_input{ width:335px; height:29px; line-height:29px; border:1px solid #d9d9d9; font-family:"microsoft yahei"; color:#999999; background:url(../images/project/b1_03.gif) no-repeat; padding-left:32px;}
+.project_login_button{ width:80px; height:33px; background:url(../images/project/btn_06.gif); color:#666666; font-family:"microsoft yahei"; font-size:16px; border:1px solid #d9d9d9}
+
+#footer {line-height:40px; padding: 10px; color:#888; text-align:center }
+#footer p { padding-bottom: 0; }
+#footer a { color: #fff; text-decoration: none; }
+#footer a:hover { color: #237087; }
+#footer span { margin: 0 6px;}
+
+/**/
+.bg1{ padding-top:1px; background:url(../images/project/1_02.png) right top no-repeat}
+.liucheng{ margin-top:10px;}
+.project_submit{ width:510px; height:220px; margin:200px auto; background:url(../images/project/leaf_03.png) right bottom no-repeat;}
+.project_login_input_box{ width:380px; height:}
+.project_login_input2{ width:335px; height:29px; line-height:29px; border:1px solid #d9d9d9; font-family:"microsoft yahei"; color:#999999; background:url(../images/project/b2_03.gif) no-repeat; padding-left:32px; margin-top:10px;}
+.project_login_submit{ width:80px; height:79px; background:url(../images/project/btn.gif); color:#666666; font-family:"microsoft yahei"; font-size:22px; border:1px solid #d9d9d9}
+
+
+/**/
+
+
+.zhuti{ background: url(../images/project/bj_07.gif); min-height:500px;border-top:1px solid #ccc}
+
+.pro_head{ margin-top:20px;}
+.pay_left{ width:770px; float:left; padding-left:20px; background:url(../images/project/pay_17.gif) 600px 69px no-repeat}
+.fangfa{ font-size:16px; font-family:"microsoft yahei"; color:#FF6600; background:url(../images/project/pay_10.gif) no-repeat; padding-left:24px;margin-top:20px;}
+.pay_left p{ line-height:29px; font-size:14px; color:#000; font-family:"microsoft yahei"; background:url(../images/project/pay_1.gif) 7px 5px no-repeat; padding-left:32px; margin-top:9px;}
+.shjh{ width:742px; border:1px solid #eaeaea; background:#fff; margin-top:16px; margin-bottom:20px;}
+.shjh table{ margin-left:56px; margin-top:35px; font-family:"microsoft yahei"; margin-bottom:40px; }
+.shjh .shuzi{ color:#999999; font-family:Arial, Helvetica, sans-serif;}
+.shjh table .biaoti{ font-size:14px;}
+.input_mingzi{ width:215px; padding-left:5px; height:22px; line-height:24px; background:url(../images/project/mzbg_22.gif); color:#666; border:1px solid #d7d7d7; border-left:2px solid #79e800}
+.input_mingzi_bj{ width:215px; padding-left:5px; height:22px; line-height:24px; background:url(../images/project/mzbg_22.gif); color:#666; border:1px solid #e25500; border-left:2px solid #e25500}
+.input_shouji{ width:215px; padding-left:5px; height:22px; line-height:24px; background:url(../images/project/mzbg_22.gif); color:#666; border:1px solid #d7d7d7;}
+.fasong{ width:54px; height:24px; border:1px solid #dadada; background:url(../images/project/fasong_24.gif); color:#777}
+
+
+.pay_right{ width:209px; min-height:750px; float:right; background:url(../images/project/lc2_33.gif) 30px 200px no-repeat}
+.zhifu{ width:177px; height:63px; font-size:24px; color:#FF6600; font-family:"microsoft yahei"; background:url(../images/project/zhifu_14.gif); border:0; margin-top:30px;}
+.pay_right table{ color:#666666; font-family:"microsoft yahei";}
+.fapiao_input{ width:98%}
+.pay_right textarea{ width:177px; color:#999; margin-top:5px; font-family:"microsoft yahei"; line-height:20px;
+background:url(../images/project/mzbg_22.gif) repeat-x #fff; color:#999; border:1px solid #d7d7d7;}
+
+
+/**/
+.neirong{ background:#fafafa; min-height:400px;}
+.neirong table{ margin-left:20px; color:#333333; font-family:"microsoft yahei"; margin-top:20px; margin-bottom:20px; border:1px solid #eee; border-top:2px solid #FF6600}
+.pay_lishi{ font-family:"microsoft yahei"; font-size:16px; color: #FF6600; padding-top:20px; margin-left:20px;}
+.pay_lishi a{ color:#999; font-size:16px; margin-left:5px;}
+.baocun{ background: url(../images/personal/order_btn.gif); border:0px solid #eeeeee; height:40px; width:130px; line-height:px; color:#fff; font-family:"microsoft yahei"; font-size:16px; margin-left:10px; margin-right:10px;}
+
+.fapiao_biao td{ padding:0 5px;}

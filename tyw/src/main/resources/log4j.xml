@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+	<appender name="ERROR_FILE_APPENDER" class="org.apache.log4j.RollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="Threshold" value="ERROR" />
+		<param name="File" value="${webapp.root}/logs/error.log" />
+		<param name="MaxFileSize" value="5MB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%-c] %m%n" />
+		</layout>
+	</appender>
+	<appender name="WARN_FILE_APPENDER" class="org.apache.log4j.RollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="Threshold" value="WARN" />
+		<param name="File" value="${webapp.root}/logs/warn.log" />
+		<param name="MaxFileSize" value="20MB" />
+		<param name="MaxBackupIndex" value="30" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%-c] %m%n" />
+		</layout>
+	</appender>
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+	<appender name="MANAGER_FILE_APPENDER" class="org.apache.log4j.RollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${webapp.root}/logs/manager.log" />
+		<param name="MaxFileSize" value="4MB" />
+		<param name="MaxBackupIndex" value="30" />
+		<param name="encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%-c] %m%n" />
+		</layout>
+	</appender>	
+	
+	<!-- 
+    <appender name="MANAGER_DATABASE_APPENDER" class="org.apache.log4j.jdbc.JDBCAppender">		
+		<param name="URL" value="jdbc:mysql://192.168.0.150/tywdb?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true"/>  
+  		<param name="driver" value="com.mysql.jdbc.Driver"/>  
+  		<param name="user" value="tyw"/>  
+  		<param name="password" value="tyw"/>      
+	    <layout class="org.apache.log4j.PatternLayout">  
+	   		<param name="ConversionPattern"  
+	    	value="insert into log(id,create_date,thread, info_level,class,message) VALUES (uuid(),now(),'%t', '%p', '%c', '%m')" />  
+	    </layout>  
+	</appender>	
+	 -->
+	
+	<category name="org.springframework">
+		<priority value="INFO" />
+	</category>
+	
+	<logger name="com.isoftstone.tyw.controller.web">
+   		<level value="debug" />
+   		<appender-ref ref="MANAGER_FILE_APPENDER" />
+   		<!-- 
+   		<appender-ref ref="MANAGER_DATABASE_APPENDER" />
+   		 -->
+	</logger>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="ERROR_FILE_APPENDER" />
+		<appender-ref ref="WARN_FILE_APPENDER" />
+	</root>
+</log4j:configuration>

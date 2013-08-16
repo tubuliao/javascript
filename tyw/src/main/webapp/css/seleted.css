@@ -1,0 +1,17 @@
+ 
+.selectBox{ float:left; background:url(/images/search/ssxl_03.gif); width:17px; height:28px; overflow:hidden}
+.selectBox p a{
+display:block; background:#ffffff; padding-left:17px; color:#666666;
+line-height:24px!important;line-height:26px;height:24px; overflow:hidden; border-bottom:1px solid #eeeeee;
+}
+.selectBox a{
+display:block; padding-left:17px; color:#79a2bd;
+line-height:26px!important;line-height:28px;height:28px; overflow:hidden;
+}
+
+.selectBox p{
+margin:0; padding:0;display:none; position: absolute; width:100px;
+background:url(selectBG.gif) left bottom; padding-bottom:6px;
+}
+.selectBox p a:hover{ background:#dddddd}
+ 

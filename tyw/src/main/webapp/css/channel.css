@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+.top_box{ width:100%; height:141px; background:url(../images/channel/bg_02.gif) ;}
+.com_top{ height:33px; line-height:33px; margin-bottom:8px;}
+.com_top a{ color:#666}
+
+
+
+.channel_positon{ height:40px; line-height:40px; color:#333333 }
+.channel_positon .right{ width:300px; text-align:right}
+
+
+
+.channel_shot{ background:#F5F5F5; clear:both; background:url(../images/channel/channel_11.gif) top no-repeat #fff; padding-top:2px; border:1px solid #e1e1e1; border-top:0;}
+.channel_shot h3{ line-height:30px; color:#444; font-weight:normal}
+.channel_shot h3 a{ color:#444}
+.channel_shot h3 span{ font-size:12px; color:#999999;}
+.channel_shot .right{ line-height:25px; margin-top:15px; margin-right:10px; font-family:"microsoft yahei";}
+.channel_shot .right span{ font-size:20px; font-family:Arial, Helvetica, sans-serif; color:#4bbd00; font-weight:bold}
+.channel_head{ width:64px; height:64px; border:1px solid #CCCCCC; margin:10px 0 10px 10px; float:left;}
+.channel_news li{ list-style:none; background:url(../images/channel/images/arr.gif) no-repeat 0px; padding-left:7px; line-height:40px; float:left; width:420px; margin-left:15px; margin-right:15px; font-family:"microsoft yahei"; border-bottom:1px dashed #e4e0e1}
+.channel_news li .right{ color:#999999;}
+.channel_xs{ line-height:30px; margin:20px 0 0 20px; font-family:"microsoft yahei"; font-size:14px; color:#444}
+.channel_news li a{ color:#333}
+.channel_news{ margin:30px;}
+
+.shot_bottom{ height:50px; line-height:50px; background:#fafafa; border-top:1px solid #ededed; color:#666666; padding:0 20px;}
+.shot_bottom .right{ margin-top:0; line-height:50px;}
+.shot_bottom .news{ color:#999999}
+.shot_bottom a{ color:#666666}
+.news a{ font-size:14px; color:#333333; margin-right:20px;}
+
+
+/* 个人信息 */
+
+.channel_table{ border:0px solid #F2F2F2}
+.avatar{ width:100px; height:100px;}
+
+#add{ width:600px; min-height:300px; padding:0 10px; background-color:#fff; border-top:3px solid #42c900; display: none; z-index:1; position:absolute; top:-30px; left:200px;}
+.close{ height:50px; line-height:30px; text-align:right}
+#add table{ background:#ccc}
+#add table td{ background:#fff}
+
+.order_btn{ width:130px; height:40px; color:#FFFFFF; font-family:"microsoft yahei"; font-size:16px; background:url(../images/personal/order_btn.gif); border:0; }
+.channel_btn{ width:100px; height:24px; background:url(../images/channel/channel_38.gif); color:#333333; font-weight:bold; border:1px solid #dbdbdb;}
+
+
+
+.footer{ width:990px; margin:0 auto}
+
+
+/**/
+
+.xiaoshoue{ font-size:14px; color:#333}
+.xiaoshoue b{ color:#41c500; font-size:16px;}
+.channel_btn2{ width:100px; height:24px; display:block; font-size:12px; text-align:center; line-height:24px; background:url(../images/channel/channel_38.gif); color:#333333; font-weight:bold; border:1px solid #dbdbdb;}
+.channel_account{ background:#FFFFFF;}
+
+.tab{ background:url(../images/bg/bg2.gif); color:#41c500; padding:5px 8px; border:1px solid #ebebeb; border-bottom:0; line-height:25px;}
+.id_input{ border:1px solid #999999; line-height:20px; height:20px; color:#333; width:90%;
+-moz-box-shadow:2px 1px 2px #d3d3d3 inset;               /* For Firefox3.6+ */
+-webkit-box-shadow:2px 1px 2px #d3d3d3 inset;            /* For Chrome5+, Safari5+ */
+box-shadow:2px 1px 2px #d3d3d3 inset;                    /* For Latest Opera */
+}
+.chaxun{ width:87px; height:38px; line-height:38px; border:0; color:#fff; font-family:"microsoft yahei"; background:url(../images/channel/chaxun_03.gif); font-size:14px}

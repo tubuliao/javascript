@@ -1,0 +1,180 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>天佑网网站地图</title>
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+<LINK rel=stylesheet type=text/css href="${pageContext.request.contextPath}/css/search.css">
+<LINK rel=stylesheet type=text/css href="${pageContext.request.contextPath}/css/home.css">
+ <script src="${pageContext.request.contextPath}/easyui-1.3.2/jquery-1.8.0.min.js"></script>
+ <script src="${pageContext.request.contextPath}/js/rotate3di.js"></script>
+<script src="${pageContext.request.contextPath}/js/rotateCss.js"></script>
+ 
+
+</head>
+<body>
+<div class="body">
+<jsp:include page="${pageContext.request.contextPath}/top.jsp" />
+
+  
+<div class="map_banner"> <img src="images/map_03.jpg" /></div>
+  <div class="clear"></div>
+	<div class="webmap">
+  <div class="webmap_list">
+        	<div class="webmap_list_title">首页：</div>
+			<div class="webmapli">
+            	<ul>
+                	<li><a href="/" title="首页">首页</a></li>
+                </ul>
+            </div>
+        <div class="clear"></div>
+        </div>
+        <div class="webmap_list">
+        	<div class="webmap_list_title">知识性质：</div>
+			<div class="webmap_list_list">
+            	<div class="">
+    <ul>
+      <li><a title="最新的建筑行业技术、知识信息动态的发布，为工程技术人员提供最新的标准规范颁布等知识信息动态及行业新技术发展应用信息动态等。" target='_blank'  href="/knowledge/web/newTable?rootCode=40101000000000000">土木资讯</a></li>
+				    <li><a title="及时发布国家、建设部、相关部委以及各地建设行政主管部门工程建设相关的法律、法规、文件、通知以及相应的政策解读。" target='_blank' href="/knowledge/web/displayKnowledgeByDate?rootCode=40102000000000000">法律法规</a></li>
+				    <li><a title="系统、全面地发布现行的、最新的工程建设行业涉及的材料标准、建设标准、地方性标准等信息，让工程技术人员随时了解、掌握最新标准规范在工程上的应用。" target='_blank'  href="/knowledge/web/bookList?rootCode=40103000000000000&sourceType=1">标准规范</a></li>
+				    <li><a title="系统、全面地发布现行的、最新的国家及各地区有关工程建设标准图集信息。" target='_blank'  href="/knowledge/web/bookList?rootCode=40105000000000000&sourceType=2">施工图集</a></li>
+    </ul>
+    <ul>
+    <li><a title="有关工程建设的强制性条文内容的检索查询，移动终端和语音识别功能的应用，使工程技术人员随时随地了解和掌握强制性条文内容，保障工程质量安全。" target='_blank'  href="/knowledge/web/anotherTable?rootCode=40201000000000000">强制性条文</a></li>
+                    <li><a title="系统、全面提供工程建设常用技术标准规范条文内容的检索查询，移动终端和语音识别功能的应用，使工程技术人员随时随地了解和掌握工程项目施工应用的最新规范条文，确保工程质量和安全。" target='_blank'   href="/specialKnowledge/web/ClauseNew/1">规范条文</a></li>
+                    <li><a title="工程建设施工中涉及施工安全的强制性条文和安全规范条文的内容检索查询，移动终端和语音识别功能的应用，使工程技术人员随时随地了解和掌握工程项目施工安全规范条文，确保施工安全工作落实。" target='_blank'  href="/knowledge/web/newTable?rootCode=40203000000000000">安全条文</a></li>
+                    <li><a title="包括了国家级、各省市级、大型企业等近年来的建筑工程相关工法。" target='_blank'  href="/knowledge/web/otherTable?rootCode=40205000000000000">工法</a>·<a title="来自于多家大型工程建设施工企业的各分部分项工程的施工工艺标准。为工程技术人员提供很好的参考。" target='_blank' href="/knowledge/web/form?rootCode=40206000000000000">工艺</a></li>
+    </ul>
+    <ul>
+      <li><a  title="提供各种结构类型的工程项目投标施组实例。" target='_blank' href="/knowledge/web/newTable?rootCode=40306000000000000">投标施组</a></li>
+                    <li><a title="包括了各种结构类型、不同用途的的工程项目实施性施工组织设计实例。" target='_blank' href="/knowledge/web/newTable?rootCode=40301000000000000">实施性施组</a></li>
+                    <li><a title="提供大量先进、最新的，包括工程施工组织设计、分项工程施工方案、专项施工方案、施工技术交底等技术文件案例，给工程技术人员工作提供参考与应用。" target='_blank'    href="/knowledge/web/sgfaform?rootCode=40302000000000000">施工方案</a></li>
+                    <li><a  title="针对各分部分项工程、不同建筑材料、重点工序和特殊施工做法，提供了多种的施工技术交底。" target='_blank' href="/knowledge/web/form?rootCode=40303000000000000">技术交底</a></li>
+    </ul>
+    <ul>
+      <li><a title="按照分部分项工程，分别给出了工程施工前准备、工程做法、相关技术问答、应注意的事项等多种类型的知识。" target='_blank' href="/knowledge/web/form?rootCode=40401000000000000">施工做法</a></li>
+                    <li><a title="大量的来自工程施工一线的、实用的经验技巧和工程做法、案例，给工程技术人员现场实际施工中以很好的学习与应用。" target='_blank'   href="/knowledge/web/form?rootCode=40402000000000000">经验技巧</a></li>
+                    <li><a title="为工程建设施工以及技术人员提供了施工、技术、质量、安全等各项的基础数据。" target='_blank' href="/knowledge/web/form?rootCode=40403000000000000">数据</a>·<a title="内容包括了工程管理、质量、安全等案例，通过工程实例，为不同工程施工管理等工作提供很好的参考。" target='_blank' href="/knowledge/web/otherTable?rootCode=40404000000000000">案例</a></li>
+                    <li><a title="针对于分部分项工程的施工过程中常用计算公式、计算实例、计算数据提供了丰富的知识内容，为工程施工技术人员工程中实用。" target='_blank' href="/knowledge/web/form?rootCode=40405000000000000">计算</a>·<a title="对于分部分项工程以及各构造节点，提供大量的各种构造节点做法详图和CAD图块，直接方便工程技术人员工程施工中应用。" target='_blank' href="/knowledge/web/form?rootCode=40406000000000000">详图</a></li>
+    </ul>
+    <ul>
+      <li><a title="把各分部分项工程质量验收的具体要求、各省市对于工程建设质量验收要求内容，按照知识切片内容形式展现，能方便快捷地查找并实现语音播报功能，方便工程现场质量检查验收工作应用。" target='_blank'  href="/knowledge/web/form?rootCode=40501000000000000">质量检验</a></li>
+                    <li><a title="按照分部分项工程和施工工序，加强对于工程施工过程的质量控制，确立工序质量控制点，抓好重点、难点、关键点的质量控制工作，确保工程施工质量。" target='_blank'    href="/knowledge/web/form?rootCode=40502000000000000">质量控制</a></li>
+                    <li><a title="按照分部分项工程和施工工序，重点做好对于工程施工过程中常见质量问题、质量通病、质量事故的预防和处理，确保工程施工质量。" target='_blank'   href="/knowledge/web/form?rootCode=40503000000000000">质量通病</a></li>
+                    <li><a title="根据国家级、省市级建筑、结构优质工程评审要求，对优质精品工程质量策划、管理、施工做法、申报评审以及相应的工程案例等全方位的知识进行整理，以为创优质工程提供参考学习。"  target='_blank'  href="/knowledge/web/newTable?rootCode=40504000000000000">工程创优</a></li>
+    </ul>
+    <ul>
+      <li><a title="工程施工资料表格是建筑工程成果的表现，是作为城建档案的重要组成部分。资料管理模块为工程技术人员提供了各省市相应的资料标准表格、表格填写说明、样表等，对规范工程资料管理工作有着重要的作用。"  target='_blank'  href="/knowledge/web/form?rootCode=40601000000000000">工程资料</a></li>
+                    <li><a title="国家、行业每年都有很多的技术标准规范修订、更新和新颁布实施，如何更好地做好这些技术标准规范的落实和执行，资料表格既是工程建设的成果，也是贯彻落实标准规范要求的必要。中国建筑业协会工程建设质量监督分会组织专家每年编制相应的新规范表格，是贯彻执行新技术标准和加强工程质量监督检测的一项重要工作。"  target='_blank'  href="/knowledge/web/form?rootCode=40603000000000000">新规范表格</a></li>
+                    <li><a  title="把工程质量检测检验机构对于工程材料试验、施工试验、结构性能检测过程中应用到的检测试验记录用表等，按照检测试验的类别，分别提供了表式和相关说明。" target='_blank' href="/knowledge/web/form?rootCode=40602000000000000">检测机构用表</a></li>
+                    <li><a title="对于工程施工管理工作常用的表格，按照项目部各部门的设置和工作内容要求，提供了相应的管理工作常用表格。"  target='_blank' href="/knowledge/web/newTable?rootCode=40604000000000000">管理常用表</a></li>
+    </ul>
+    <ul>
+    <li><a title="提供了丰富的安全管理制度、安全教育培训、安全检查验收等安全和管理的知识内容。"  target='_blank'  href="/knowledge/web/newTable?rootCode=40701000000000000">安全管理</a></li>
+                    <li><a title="按照分部分项工程以及工程现场施工中重点的涉及安全的事项，提供了丰富的安全技术知识内容。"  target='_blank'  href="/knowledge/web/form?rootCode=40702000000000000">安全技术</a></li>
+                    <li><a title="建筑工程施工现场安全资料表格及相关的方案、交底等文件，虽然不作为城建档案归档，但是有效地保证工程建设施工安全管理工作落实到位，确保人民生命财产安全的一项重要的安全管理措施，当前只有部分省份有系统的施工安全管理资料，因此，做好施工安全管理资料的系统化工作尤为重要。"  target='_blank'  href="/knowledge/web/form?rootCode=40703000000000000">安全资料</a></li>
+                    <li><a title="主要包括分部分项工程施工过程中的环境保护和控制要求以及涉及节能减排等内容的。"  target='_blank'  href="/knowledge/web/newTable?rootCode=40704000000000000">环境保护</a></li>
+    </ul>
+    <ul>
+    <li><a title="按照工程项目管理规范的要求，对于工程项目管理过程中，涉及的相关管理工作知识、管理案例以及各项管理工作要求的知识，提供了丰富的有很强参考性内容。" target='_blank'  href="/knowledge/web/newTable?rootCode=40804000000000000">工程管理</a></li>
+                    <li><a title="对于工程招标投标的相关基础知识、相关要求以及招标和投标过程中的文件编制要求，同时提供了大量的投标招标案例供参考学习。" target='_blank'  href="/knowledge/web/newTable?rootCode=40803000000000000">招投标</a>·<a title="分别按照工程量计算、工程量清单计价、工程概算、工程预算以及工程竣工结算等要求，对于基础知识、基本要求、计量计价规则和要求等等提供了详细的知识内容，并提供大量的工程造价实例供参考学习使用。" target='_blank' href="/knowledge/web/newTable?rootCode=40805000000000000">造价</a></li>
+                    <li><a title="对于工程项目施工中常用的建筑材料、设备、构配件等工程物资的相关技术标准要求的内容以及工程物资管理工作相关的要求等，以丰富的内容提供给工程技术人员应用。" target='_blank'  href="/knowledge/web/newTable?rootCode=40806000000000000">物资</a>·<a title="主要包括了工程施工机械机具的相关技术要求、机械机具选型、安全操作使用、维修保养以及机械机具的管理要求等知识内容。" target='_blank' href="/knowledge/web/newTable?rootCode=40801000000000000">机械</a></li>
+                    <li><a title="对于工程项目施工中常用的建筑材料、设备、构配件等工程物资、工程施工检测试验、结构性能检测试验以及管理工作要求等，提供了丰富的知识内容。" target='_blank'  href="/knowledge/web/newTable?rootCode=40802000000000000">试验</a>·<a title="包括了建筑工程施工测量的基础知识、工程施工测量、城市测量、变形测量、内业等各项测量工作提供了专业的知识内容。" target='_blank' href="/knowledge/web/newTable?rootCode=40807000000000000">测量</a></li>
+    </ul>
+    <ul>
+     <li><a title="对于工程建设相关的基础理论培训、工程技术人员岗位及管理培训、各项新技术培训、法律法规以及标准规范的宣贯培训、工程质量培训、资料管理培训和工种培训等各项培训课程提供了相应的课程培训知识要点、培训教材、PPT课程件、视频等资源。" target='_blank'  href="/knowledge/web/newTable?rootCode=40903000000000000">培训课程</a></li>
+     			    <li><a title="本模块内容不仅包括了国家与工程建设相关的各类执业注册考试培训的相关视频、学习内容外，还有工程技术人员岗位教育、继续教育、新技术培训、法规规范宣贯培训等知识内容，对于提升工程技术人员专业技术水平和职业技能有很大的实用性。" target='_blank'  href="/knowledge/web/newTable?rootCode=40902000000000000">执业考试</a></li>
+     			    <li><a title="视频资源既涵盖了工程建设过程中，各项具体工作的内容，具体包括各分部分项工程施工做法、相关培训课程视频、工程创优视频、技术人员及工种岗位工作视频等。" target='_blank'  href="/toPackageList">视频</a>·<a title="主要包括工程现场管理、工程施工、工程质量及创优等工程施工过程的照片图片，工程实际效果照片图片等。" target='_blank' href="/knowledge/web/newTable?rootCode=40905000000000000">图片</a></li>
+     			    <li><a title="建筑文化内容广泛，为工程技术人员提供丰富的建筑施工文化知识和有关常识。建筑论文主要为各类工程技术专业论文、文集。" target='_blank'  href="/knowledge/web/newTable?rootCode=40904000000000000">论文</a>·<a title="为在校的土木工程专业学生学习和即将的实习就业工作，提供大量的、理论与实践相结合，尽快促进学以致用的专业知识内容，为他们能快速成长为合格的工程技术人员提供学习和应用帮助。" target='_blank' href="/knowledge/web/newTable?rootCode=40906000000000000">学生</a></li>
+    </ul>
+    <ul>
+      <li><a title="包括建筑、装饰、设备安装以及工程机械机具等各类工程建设相关的新产品信息及应用知识内容。" target='_blank' href="/knowledge/web/newTable?rootCode=41001000000000000">新技术信息</a></li>
+      <li><a title="包括住房和城乡建设部十项重点新技术以及各项绿色节能技术在建筑工程中的应用要点和具体的施工做法等知识，对于促进建筑科技进步和技术推广应用提供帮助。" target='_blank' href="/knowledge/web/newTable?rootCode=41002000000000000">新技术应用</a></li>
+      <li><a title="对于四新技术在工程项目施工中的应用管理、示范工程实例以及工程的申报和评审工作要求等，提供相关的管理和施工案例。" target='_blank' href="/knowledge/web/newTable?rootCode=41003000000000000">工程示范</a></li>
+      <li><a title="汇集了大量的与建筑工程相关的材料、施工工艺做法等专利技术信息。" target='_blank' href="/knowledge/web/displayKnowledgeByDate?rootCode=41004000000000000">专利技术</a></li>
+    </ul>
+  </div><div class="clear"></div>
+            </div>
+        <div class="clear"></div>
+        </div>
+        <div class="webmap_list">
+        	<div class="webmap_list_title">分部分项：</div>
+			<div class="webmapli">
+			  <ul>
+                <li><a href="/knowledge/web/fbfxChannel?fbfxCode=10000000000000000" title="分部分项">分部分项</a></li>
+		      </ul>
+			</div>
+        <div class="clear"></div>
+        </div>
+        <div class="webmap_list">
+        	<div class="webmap_list_title">个人中心：</div>
+			<div class="webmapli">
+            								
+                	<a href="javascript:void(0);" onclick="checkHome();" title="个人主页">个人主页</a>
+                	<a href="javascript:void(0);" onclick="checkData();" title="我的信息">我的信息</a>
+                    <a href="javascript:void(0);" onclick="checkAccount();" title="我的账户">我的账户</a>
+                    
+                    
+                
+          </div>
+       
+          
+        <div class="clear"></div>
+        
+        
+        </div>
+        <div class="webmap_xc">
+        尊敬的用户，当前，天佑网正组织大范围的知识整理和入库工作：<br />
+截止7月1日，已经入库知识数量5万余条；截止8月1日，计划入库知识总量达10万条；<br />
+截止10月1日，计划入库知识总量20万条；截止2013年底，计划入库知识总量达到30万条以上，并持续不断修订、更新。<br />
+        </div>
+    </div>
+    <input id="userId" name="userId" type="hidden" value="${user.id}"/>
+  <div class="clear"></div>
+  <div class="foot">联系我们 | 招贤纳士 | 移动客户端 | 风格模板 | 官方博客  天佑网版权所有　©1997-2013　粤ICP备20090191号</div>
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+ function checkHome(){
+	 var userId = $("#userId").val();
+		
+		if(userId == null || userId == ''){
+			alert("请先登录！");
+			location.href='/login.jsp';
+		}else{
+			location.href='/personCentermyStatus';
+		}
+ }
+ 
+ function checkData(){
+	 var userId = $("#userId").val();
+		
+		if(userId == null || userId == ''){
+			alert("请先登录！");
+			location.href='/login.jsp';
+		}else{
+			location.href='/personCenter1';
+		}
+ }
+ 
+ function checkAccount(){
+	 var userId = $("#userId").val();
+		
+		if(userId == null || userId == ''){
+			alert("请先登录！");
+			location.href='/login.jsp';
+		}else{
+			location.href='/person/myAccount';
+		}
+ }
+</script>
+</html>

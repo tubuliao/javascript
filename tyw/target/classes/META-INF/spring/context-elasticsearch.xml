@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:elasticsearch="http://www.pilato.fr/schema/elasticsearch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.pilato.fr/schema/elasticsearch http://www.pilato.fr/schema/elasticsearch/elasticsearch-0.1.xsd">
+	<bean id="esClient"
+		class="fr.pilato.spring.elasticsearch.ElasticsearchTransportClientFactoryBean">
+		<property name="esNodes">
+			<list>
+				<value>${elasticsearch.InetSocketTransportAddress}:${elasticsearch.InetSocketPort}</value>
+			</list>
+		</property>
+	</bean>
+</beans>

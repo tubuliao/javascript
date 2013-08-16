@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+body{}
+
+
+
+.new_left{ width:205px; margin-top:5px; background:#; margin-left:5px; _margin-left:2px; float:left; font-family:"microsoft yahei";}
+.new_left_top{ line-height:34px; height:34px; text-align:center; font-size:14px; color:#ffffff; font-weight:bold; background: url(../images/new/fbfx_19.gif)}
+.new_left_top span{ display:block; float:left; width:140px; height:33px;}
+.new_left_top span a{ color: #ffffff}
+.new_left_top .left{ margin-top:0px; margin-left:5px;}
+.new_left_top .right{ margin-top:0px; margin-right:5px;}
+.new_left li{ color:#2a3b41; line-height:30px; height:30px; border-bottom:1px solid #d9d9d9; border-right:1px solid #dfe1e2; border-left:1px solid #dfe1e2; background:url(../images/new/fbfxbg_32.gif); padding-left:10px;}
+.new_left li.hover a{ color:#4bc700}
+.new_left li .left{ width:170px; height:30px; overflow:hidden}
+.new_left li .right{ margin-top:10px; margin-right:7px;}
+
+.new_right{ float:left;margin:0 5px; padding-top:5px;}
+.new_position{ line-height:32px; height:32px; font-family:"microsoft yahei"; padding-top:0px; _height:24px; _padding-top:8px; background:url(../images/new/fbfx_11.gif) 60px no-repeat; border-bottom:1px solid #efefef; border-top:1px solid #efefef}
+.new_position img{ margin-top:9px; margin-left:10px; margin-right:17px; float:left}
+.new_position a{ color:#888888}
+.new_search{ margin:0px 0px 5px 2px; border:1px solid #dadada; background:#ffffff; border-left:2px solid #}
+.new_search_title{ height:30px; line-height:30px; background: url(../images/new/fbfx_26.gif) 10px 8px no-repeat #f7f7f7; font-weight:bold; padding-left:28px;}
+.new_search_bottom{ background:#f7f7f7; height:35px; border-top:1px solid #dddddd}
+.talbe2{ font-size:12px;}
+.table2 .xmm_input_s{ background:none; border:1px solid #add2f1; height:20px; line-height:20px;}
+.table2 select{ border:1px solid #add2f1; line-height:20px; height:25px; background:none}
+.table2 td{ padding-right:px}
+.table2 div{ width:70px; height:24px; line-height:24px; background:f0f0f0; color:#5b5b5b; font-family:"microsoft yahei"; padding-right:3px;}
+.new_chaxun{ border:1px solid #00910d; background: url(../images/new/xia_03.gif) 65px 5px no-repeat #26b833; padding-right:20px; color:#fff; padding-top:2px; padding-bottom:2px; float:right; margin-top:7px; margin-right:8px; cursor:pointer}
+
+.new_right_book{ width:350px; margin-top:10px; float:left}
+.new_right_book_title{ font-family:"microsoft yahei"; padding-left:30px; background:url(../images/new/new_21.gif) no-repeat; line-height:25px; height:25px; color:#00ad04; font-size:14px; margin-bottom:10px; font-weight:bold;}
+.new_right_book_title img{ margin-top:5px; margin-left:5px;}
+.new_right_book_title span{ color:#9d9d9d; font-size:12px; font-weight:normal;}
+.new_right_book_title .right{ display:none}
+.new_right_book li{ line-height:30px; font-family:"microsoft yahei"; background:url(../images/new/new_35.gif) 20px 6px no-repeat; padding-left:40px; margin:2px 0; margin-left:5px;}
+.new_right_book li.hover{ background:url(../images/new/new_32.gif) 18px 6px no-repeat #fff; border-left:2px solid #00ccce;}
+
+.new_right_mulu{ width:735px; margin-top:10px; margin-left:10px; float:left;}
+.mulu_select{ margin-left:3px; border-bottom:1px solid #6d6d6d}
+.mulu_select a{ background:#6d6d6d; text-align:center; font-family:"microsoft yahei"; color:#fff; display:inline-block; line-height:27px; height:27px; width:80px; margin-right:1px;}
+.mulu_select a.hover{ background:#26b833}
+.p_tree{ float:left; width:230px; padding-right:10px; overflow-x:hidden; border:1px solid #f0f0f0}
+.mulu_list{ width:px;}
+.search_leibie_pd{ color:#999999}
+.search_leibie_pd img{ filter:alpha(opacity=50); /*IE滤镜，透明度50%*/ -moz-opacity:0.5; /*Firefox私有，透明度50%*/ opacity:0.5;/*其他，透明度50%*/}
+.search_leibie_pd .right{ color:#999999; font-size:px}
+.mulu_list li{ padding-right:20px; font-size:12px; font-family:"microsoft yahei"; padding-left:5px; margin-bottom:10px; border-bottom:1px solid #eeeeee; padding-bottom:5px;}
+.search_list_pd_bt{ line-height:35px;}
+.search_list_pd_bt .left{ width:600px; height:35px; overflow:hidden;}
+.search_list_pd_bt .right{ color:#666666}
+.mulu_list li .search_list_pd_bt a{ background:#ffffff; padding-right:10px; font-size:14px;}
+.mulu_list li.hover a{ color:#01b005}

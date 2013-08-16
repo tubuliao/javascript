@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ask{ margin:10px 20px;}
+.ask_question h3{ font-family:"microsoft yahei"; font-weight:; color:#666666; line-height:25px; margin:0}
+.ask_question h4{ color:#999999; font-weight:normal; line-height:30px; margin:0}
+.ask_question h4 .right{ color:#CCCCCC}
+.ask_question textarea{ width:740px; color:#ccc; line-height:25px; padding-left:5px;}
+
+.ask_btn{ border:0; background:url(../images/ask/ask_07.gif); width:86px; height:28px;}
+.ask_question p{ color:#999999;}
+.ask_question p span{ font-size:18px; font-family:Arial, Helvetica, sans-serif; color:#fc9409}
+
+.question_area{ margin-top:20px; }
+.question_area_head{ background:url(../images/ask/ask_11.gif); border:1px solid #dddddd; height:31px; line-height:31px;}
+.question_area_head img{ margin-top:-3px; margin-left:10px; margin-right:3px;}
+.question_area_head a{ color:#333333}
+.question_area_head a:hover{ color:#FF6600; font-weight:bold}
+
+.question_area table{ margin-top:10px;}
+.question_area table td{ border-bottom:1px dotted #e4e4e4; color:#c7c7c7}
+.question_area table a{ color:#5ba9ca; margin-left:5px;}
+
+.question_answer{ margin-top:10px;}
+.question_answer h3{ font-family:"microsoft yahei"; font-weight:normal; color:#666666; line-height:35px; margin:0}
+.question_answer li{ list-style:none; color:#999999; border-bottom:1px dotted #ccc; padding-bottom:5px; margin-bottom:10px;}
+.question_answer li a{ color:#1a5fad;}
+.question_answer li img{ border:1px solid #f6f6f6; padding:2px; margin-right:8px;}
+.question_answer li div{ width:690px;}
+.question_answer li div span{ line-height:25px;}
+.question_answer li div .right{ color:#d1d1d1; font-family:Arial, Helvetica, sans-serif}
+.question_answer li p{ color:#868686; line-height:20px;}
+
